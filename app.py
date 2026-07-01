@@ -22,7 +22,7 @@ st.markdown("""
         margin-bottom: 20px;
     }
     </style>
-    """, unsafe_allow_items=True)
+    """, unsafe_allow_html=True)
 
 # --- ゲームデータ定義 ---
 # マスごとのデータ (画像はサンプルURL。実際には自前の画像パスに変更可能)
