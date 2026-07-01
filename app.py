@@ -95,8 +95,24 @@ else:
         
         st.session_state.pos = next_pos
         st.session_state.log.append(f"進んだ！(+{salary}万円)")
-        if st.session_state.pos >= 20: st.balloons()
-        st.rerun()
+        # ゴール判定（ロジック内の既存のゴール判定をこれに置き換えてください）
+        if st.session_state.pos >= 20:
+            st.balloons()
+            # 最終結果の表示
+            st.success(f"""
+            🎉 **ゴール！あなたの人生の結果**
+            - **職業:** {st.session_state.job}
+            - **状況:** {st.session_state.partner}
+            - **最終資産:** {st.session_state.money}万円
+            """)
+            
+            # リセットボタン
+            if st.button("もう一度遊ぶ"):
+                st.session_state.update({
+                    'pos': 0, 'money': 100, 'job': "学生", 
+                    'partner': "独身", 'log': [], 'waiting_choice': False
+                })
+                st.rerun()
 
 # 履歴
 for m in reversed(st.session_state.log[-3:]): st.caption(m)
