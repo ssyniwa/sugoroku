@@ -60,7 +60,7 @@ with st.container():
         <b>職業:</b> {st.session_state.job} | <b>状況:</b> {st.session_state.partner}<br>
         <b>所持金:</b> {st.session_state.money}万円
     </div>
-    """, unsafe_allow_items=True)
+    """, unsafe_allow_html=True)
 
 # 現在のイベント画像
 current_cell = BOARD_DATA.get(st.session_state.pos, BOARD_DATA[0])
