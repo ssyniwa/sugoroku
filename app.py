@@ -41,7 +41,7 @@ STUDENT_EVENTS = [
     {"text": "スマホを壊して修理代", "img": "images/broken.png", "money": -15},
     {"text": "テストで赤点、補習費", "img": "images/fail.png", "money": -5},
     {"text": "友達と食べ歩きしすぎた", "img": "images/eat.png", "money": -5},
-    {"text": "図書カードをもらった", "img": "images/book.png", "money": 5}
+    {"text": "図書カードをもらった", "img": "images/book.png", "money": 5},
 ]
 SALARYMAN_EVENTS = [
     {"text": "プロジェクトリーダーに抜擢！", "img": "images/job11.png", "money": 30},
@@ -63,22 +63,22 @@ SALARYMAN_EVENTS = [
     {"text": "健康診断で再検査の診断", "img": "images/job116.png", "money": -15},
     {"text": "新しいスーツを新調", "img": "images/job117.png", "money": -20},
     {"text": "プチーム目標達成で報奨金", "img": "images/job118.png", "money": 20},
-    {"text": "慣れない事務処理でミス連発", "img": "images/job119.png", "money": -10} ... 他の18種をここに追加
+    {"text": "慣れない事務処理でミス連発", "img": "images/job119.png", "money": -10}, ... 他の18種をここに追加
 ]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
     {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
-    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20}
+    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20},
 ]
 LIFE_STAGES = [
     {"text": "家族との団らん", "img": "images/work_hard.png", "money": -10},
     {"text": "一人旅を満喫", "img": "images/raise.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/success.png", "money": 20}
+    {"text": "趣味の時間", "img": "images/success.png", "money": 20},
 ] # 10種
 ELDER_EVENTS = [
     {"text": "健康診断で異常なし", "img": "images/work_hard.png", "money": -10},
     {"text": "昔の友人と再会", "img": "images/raise.png", "money": 30},
-    {"text": "のんびりした休日", "img": "images/success.png", "money": 20}
+    {"text": "のんびりした休日", "img": "images/success.png", "money": 20},
 ]
 
 # マスごとの生成関数（100マスを網羅する）
