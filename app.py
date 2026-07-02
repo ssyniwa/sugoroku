@@ -30,10 +30,28 @@ st.markdown("""
 CHECKPOINTS = [5, 12]
 # --- 職業別・ライフステージ別イベントデータ ---
 # マス範囲ごとのイベントをリスト化（簡易実装例）
-STUDENT_EVENTS = ["テストで赤点...", "部活で優勝！", "初恋の思い出", ...] # 10種
-JOB_EVENTS = ["残業続きで疲弊", "昇給のチャンス！", "プロジェクト成功", ...] # 20種
-LIFE_STAGES = ["家族との団らん", "一人旅を満喫", "趣味の時間", ...] # 10種
-ELDER_EVENTS = ["健康診断で異常なし", "昔の友人と再会", "のんびりした休日", ...] # 10種
+# イベントリストを辞書型に拡張
+STUDENT_EVENTS = [
+    {"text": "テストで赤点...", "img": "images/fail.png", "money": -5},
+    {"text": "部活で優勝！", "img": "images/win.png", "money": 10},
+    {"text": "初恋の思い出", "img": "images/love.png", "money": 0}
+]
+
+JOB_EVENTS = [
+    {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
+    {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
+    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20}
+]
+LIFE_STAGES = [
+    {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
+    {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
+    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20}
+] # 10種
+ELDER_EVENTS = [
+    {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
+    {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
+    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20}
+]
 
 # マスごとの生成関数（100マスを網羅する）
 def get_cell_data(pos):
@@ -44,15 +62,13 @@ def get_cell_data(pos):
     
     # 範囲指定でイベントを割り当て
     elif 1 <= pos <= 19:
-        return {"text": random.choice(STUDENT_EVENTS), "img": "images/school.png", "money": random.randint(-5, 5)}
+        return random.choice(STUDENT_EVENTS)
     elif 21 <= pos <= 49:
-        # ここで職業ごとの補正を入れる
-        return {"text": f"【{st.session_state.job}】" + random.choice(JOB_EVENTS), "img": "work.png"}
+        return random.choice(JOB_EVENTS)
     elif 51 <= pos <= 79:
-        extra = "（結婚の幸せ）" if st.session_state.partner == "既婚" else "（自由な独身生活）"
-        return {"text": f"{extra}{random.choice(LIFE_STAGES)}", "img": "images/life.png", "money": random.randint(-20, 20)}
+        return random.choice(LIFE_STAGES) # これも辞書型にしておくこと
     elif 80 <= pos <= 99:
-        return {"text":random.choice(ELDER_EVENTS), "img": "images/elder.png", "money": random.randint(-5, 5)}
+        return random.choice(ELDER_EVENTS)
     return {"text": "平凡な日常",  "img": "images/akari5.png","money": 0}
 # --- 初期化 ---
 if 'pos' not in st.session_state:
@@ -115,7 +131,7 @@ else:
         stats = JOB_STATS[st.session_state.job]
         salary = stats["salary"] + random.randint(-5, stats["luck_bonus"])
         st.session_state.money += salary
-        
+        st.session_state.money += current_cell["money"]
         # チェックポイント判定
         for cp in CHECKPOINTS:
             if st.session_state.pos < cp <= next_pos:
