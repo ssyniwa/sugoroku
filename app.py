@@ -112,7 +112,7 @@ st.title("🎲 Life Quest 2026")
 
 # 現在のイベント情報を取得
 current_cell = get_cell_data(st.session_state.pos)
-
+st.session_state.money += current_cell.get("money", 0)
 # 画像とステータスを一つのまとまりとして表示
 with st.container():
     col1, col2 = st.columns([1, 1])  # 画面を半分ずつに分ける
@@ -164,8 +164,8 @@ else:
         stats = JOB_STATS[st.session_state.job]
         salary = stats["salary"] + random.randint(-5, stats["luck_bonus"])
         st.session_state.money += salary
-        current_cell = get_cell_data(st.session_state.pos)
-        st.session_state.money += current_cell.get("money", 0)
+        
+        
         # チェックポイント判定
         for cp in CHECKPOINTS:
             if st.session_state.pos < cp <= next_pos:
