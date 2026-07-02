@@ -26,12 +26,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- ゲームデータ ---
-BOARD_DATA = {
-    0: {"text": "スタート！希望に満ちた朝。", "img": "images/akari1.png"},
-    5: {"text": "【運命の分かれ道】職業選択マス", "img": "images/akari2.png", "type": "checkpoint"},
-    12: {"text": "【運命の分かれ道】結婚選択", "img": "images/akari3.png", "type": "checkpoint"},
-    20: {"text": "ゴール！", "img": "images/akari4.png"}
-}
+
 CHECKPOINTS = [5, 12]
 # --- 職業別・ライフステージ別イベントデータ ---
 # マス範囲ごとのイベントをリスト化（簡易実装例）
@@ -91,7 +86,7 @@ st.subheader(current_cell["text"])
 
 # --- ロジック ---
 if st.session_state.waiting_choice:
-    if st.session_state.pos == 5:
+    if st.session_state.pos == 20:
         st.write("職業を選択してください")
         # 3列にボタンを配置してスマホでも選びやすく
         cols = st.columns(3)
@@ -101,7 +96,7 @@ if st.session_state.waiting_choice:
                 st.session_state.job = job
                 st.session_state.waiting_choice = False
                 st.rerun()
-    elif st.session_state.pos == 12:
+    elif st.session_state.pos == 50:
         if st.button("結婚する（費用30万）"):
             st.session_state.partner = "既婚"
             st.session_state.money -= 30
@@ -131,7 +126,7 @@ else:
         st.session_state.pos = next_pos
         st.session_state.log.append(f"進んだ！(+{salary}万円)")
         # ゴール判定（ロジック内の既存のゴール判定をこれに置き換えてください）
-        if st.session_state.pos >= 20:
+        if st.session_state.pos >= 100:
             st.balloons()
             # 最終結果の表示
             st.success(f"""
