@@ -32,9 +32,16 @@ CHECKPOINTS = [5, 12]
 # マス範囲ごとのイベントをリスト化（簡易実装例）
 # イベントリストを辞書型に拡張
 STUDENT_EVENTS = [
-    {"text": "テストで赤点...", "img": "images/fail.png", "money": -5},
     {"text": "部活で優勝！", "img": "images/win.png", "money": 10},
-    {"text": "初恋の思い出", "img": "images/love.png", "money": 0}
+    {"text": "テストで100点！", "img": "images/test_win.png", "money": 10},
+    {"text": "アルバイトで初給料", "img": "images/part_time.png", "money": 20},
+    {"text": "落とし物を届けて謝礼金", "img": "images/reward.png", "money": 5},
+    {"text": "不用品を売って小遣い稼ぎ", "img": "images/sell.png", "money": 10},
+    {"text": "部活の遠征で出費", "img": "images/trip.png", "money": -10},
+    {"text": "スマホを壊して修理代", "img": "images/broken.png", "money": -15},
+    {"text": "テストで赤点、補習費", "img": "images/fail.png", "money": -5},
+    {"text": "友達と食べ歩きしすぎた", "img": "images/eat.png", "money": -5},
+    {"text": "図書カードをもらった", "img": "images/book.png", "money": 5},
 ]
 
 JOB_EVENTS = [
