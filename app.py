@@ -63,7 +63,7 @@ SALARYMAN_EVENTS = [
     {"text": "健康診断で再検査の診断", "img": "images/job116.png", "money": -15},
     {"text": "新しいスーツを新調", "img": "images/job117.png", "money": -20},
     {"text": "プチーム目標達成で報奨金", "img": "images/job118.png", "money": 20},
-    #{"text": "慣れない事務処理でミス連発", "img": "images/job119.png", "money": -10}, ... 他の18種をここに追加
+    {"text": "慣れない事務処理でミス連発", "img": "images/job119.png", "money": -10},
 ]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
