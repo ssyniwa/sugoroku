@@ -65,6 +65,11 @@ SALARYMAN_EVENTS = [
     {"text": "プチーム目標達成で報奨金", "img": "images/job118.png", "money": 20},
     {"text": "慣れない事務処理でミス連発", "img": "images/job119.png", "money": -10},
 ]
+ENTREPRENEUR_EVENTS = [
+    {"text": "天使投資家から出資獲得！", "img": "images/angel.png", "money": 100},
+    {"text": "自社サービスがSNSでバズる", "img": "images/buzz.png", "money": 80},
+    # ... 他の18種
+]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
     {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
@@ -94,6 +99,8 @@ def get_cell_data(pos):
     elif 21 <= pos <= 49:
         if st.session_state.job == "サラリーマン":
             return random.choice(SALARYMAN_EVENTS)
+        elif st.session_state.job == "起業家":
+            return random.choice(ENTREPRENEUR_EVENTS)
         return random.choice(JOB_EVENTS)
     elif 51 <= pos <= 79:
         if st.session_state.partner == "既婚":
