@@ -41,24 +41,27 @@ if 'pos' not in st.session_state:
 # --- メインUI ---
 st.title("🎲 Life Quest 2026")
 
-# ステータス表示と画像表示を同一のブロックにまとめる
+# 現在のイベント情報を取得
+current_cell = BOARD_DATA.get(st.session_state.pos, {"text": "平凡な日常。", "img": "images/akari5.png"})
+
+# 画像とステータスを一つのまとまりとして表示
 with st.container():
-    # 画像を先に配置
-    current_cell = BOARD_DATA.get(st.session_state.pos, {"text": "平凡な日常。", "img": "images/akari5.png"})
+    col1, col2 = st.columns([1, 1])  # 画面を半分ずつに分ける
     
-    col_img, col_stat = st.columns([1, 2])
-    with col_img:
+    with col1:
         st.image(current_cell["img"], use_container_width=True)
-    with col_stat:
+    
+    with col2:
+        # カードのスタイルを調整して中央に配置
         st.markdown(f"""
-        <div class="status-card">
-            <b>職業:</b> {st.session_state.job}<br>
-            <b>状況:</b> {st.session_state.partner}<br>
-            <b>資産:</b> {st.session_state.money}万円
+        <div style="padding: 20px; border-radius: 15px; background-color: #262730; border: 1px solid #4F46E5; height: 100%;">
+            <b style="color:white;">職業:</b> <span style="color:#A5B4FC;">{st.session_state.job}</span><br>
+            <b style="color:white;">状況:</b> <span style="color:#A5B4FC;">{st.session_state.partner}</span><br>
+            <b style="color:white;">資産:</b> <span style="color:#34D399;">{st.session_state.money}万円</span>
         </div>
         """, unsafe_allow_html=True)
 
-# 現在の状況テキストを画像の下に配置
+# テキストとボタン
 st.subheader(current_cell["text"])
 
 # --- ロジック ---
