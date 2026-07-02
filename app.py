@@ -44,15 +44,15 @@ def get_cell_data(pos):
     
     # 範囲指定でイベントを割り当て
     elif 1 <= pos <= 19:
-        return {"text": random.choice(STUDENT_EVENTS), "img": "school.png", "money": random.randint(-5, 5)}
+        return {"text": random.choice(STUDENT_EVENTS), "img": "images/school.png", "money": random.randint(-5, 5)}
     elif 21 <= pos <= 49:
         # ここで職業ごとの補正を入れる
         return {"text": f"【{st.session_state.job}】" + random.choice(JOB_EVENTS), "img": "work.png"}
     elif 51 <= pos <= 79:
         extra = "（結婚の幸せ）" if st.session_state.partner == "既婚" else "（自由な独身生活）"
-        return {"text": f"人生の中盤戦{extra}", "money": random.randint(-20, 20)}
+        return {"text": f"{extra}{random.choice(LIFE_STAGES)}", "img": "images/life.png", "money": random.randint(-20, 20)}
     elif 80 <= pos <= 99:
-        return {"text": "老後ののんびりした時間", "money": random.randint(-5, 5)}
+        return {"text":random.choice(ELDER_EVENTS), "img": "images/elder.png", "money": random.randint(-5, 5)}
     return {"text": "平凡な日常",  "img": "images/akari5.png","money": 0}
 # --- 初期化 ---
 if 'pos' not in st.session_state:
