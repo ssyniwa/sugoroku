@@ -113,7 +113,8 @@ st.title("🎲 Life Quest 2026")
 # 現在のイベント情報を取得
 current_cell = get_cell_data(st.session_state.pos)
 st.session_state.money += current_cell.get("money", 0)
-st.session_state.log.append(f"資金(+{current_cell.get("money", 0)}万円)")
+if current_cell.get("money", 0) != 0:
+    st.session_state.log.append(f"資金(+{current_cell.get("money", 0)}万円)")
 # 画像とステータスを一つのまとまりとして表示
 with st.container():
     col1, col2 = st.columns([1, 1])  # 画面を半分ずつに分ける
