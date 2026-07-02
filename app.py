@@ -43,14 +43,14 @@ JOB_EVENTS = [
     {"text": "プロジェクト成功", "img": "images/success.png", "money": 20}
 ]
 LIFE_STAGES = [
-    {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
-    {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
-    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20}
+    {"text": "家族との団らん", "img": "images/work_hard.png", "money": -10},
+    {"text": "一人旅を満喫", "img": "images/raise.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/success.png", "money": 20}
 ] # 10種
 ELDER_EVENTS = [
-    {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
-    {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
-    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20}
+    {"text": "健康診断で異常なし", "img": "images/work_hard.png", "money": -10},
+    {"text": "昔の友人と再会", "img": "images/raise.png", "money": 30},
+    {"text": "のんびりした休日", "img": "images/success.png", "money": 20}
 ]
 
 # マスごとの生成関数（100マスを網羅する）
