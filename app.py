@@ -33,7 +33,32 @@ BOARD_DATA = {
     20: {"text": "ゴール！", "img": "images/akari4.png"}
 }
 CHECKPOINTS = [5, 12]
+# --- 職業別・ライフステージ別イベントデータ ---
+# マス範囲ごとのイベントをリスト化（簡易実装例）
+STUDENT_EVENTS = ["テストで赤点...", "部活で優勝！", "初恋の思い出", ...] # 10種
+JOB_EVENTS = ["残業続きで疲弊", "昇給のチャンス！", "プロジェクト成功", ...] # 20種
+LIFE_STAGES = ["家族との団らん", "一人旅を満喫", "趣味の時間", ...] # 10種
+ELDER_EVENTS = ["健康診断で異常なし", "昔の友人と再会", "のんびりした休日", ...] # 10種
 
+# マスごとの生成関数（100マスを網羅する）
+def get_cell_data(pos):
+    if pos == 0: return {"text": "スタート！", "img": "images/akari1.png"}
+    elif pos == 20: return {"text": "職業選択マス",  "img": "images/akari2.png","type": "checkpoint"}
+    elif pos == 50: return {"text": "結婚選択マス", "img": "images/akari3.png", "type": "checkpoint"}
+    elif pos == 100: return {"text": "ゴール！", "img": "images/akari4.png"}
+    
+    # 範囲指定でイベントを割り当て
+    elif 1 <= pos <= 19:
+        return {"text": random.choice(STUDENT_EVENTS), "img": "school.png", "money": random.randint(-5, 5)}
+    elif 21 <= pos <= 49:
+        # ここで職業ごとの補正を入れる
+        return {"text": f"【{st.session_state.job}】" + random.choice(JOB_EVENTS), "img": "work.png"}
+    elif 51 <= pos <= 79:
+        extra = "（結婚の幸せ）" if st.session_state.partner == "既婚" else "（自由な独身生活）"
+        return {"text": f"人生の中盤戦{extra}", "money": random.randint(-20, 20)}
+    elif 80 <= pos <= 99:
+        return {"text": "老後ののんびりした時間", "money": random.randint(-5, 5)}
+    return {"text": "平凡な日常",  "img": "images/akari5.png","money": 0}
 # --- 初期化 ---
 if 'pos' not in st.session_state:
     st.session_state.update({'pos': 0, 'money': 100, 'job': "学生", 'partner': "独身", 'log': [], 'waiting_choice': False})
@@ -42,7 +67,7 @@ if 'pos' not in st.session_state:
 st.title("🎲 Life Quest 2026")
 
 # 現在のイベント情報を取得
-current_cell = BOARD_DATA.get(st.session_state.pos, {"text": "平凡な日常。", "img": "images/akari5.png"})
+current_cell = get_cell_data(st.session_state.pos)
 
 # 画像とステータスを一つのまとまりとして表示
 with st.container():
