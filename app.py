@@ -188,7 +188,10 @@ else:
         
         # 職業補正の適用（収入イベント）
         stats = JOB_STATS[st.session_state.job]
-        salary = stats["salary"] + random.randint(-5, stats["luck_bonus"])
+        if -5 < stats["luck_bonus"]:
+            salary = stats["salary"] + random.randint(-5, stats["luck_bonus"])
+        else :
+            salary = stats["salary"] + random.randint(stats["luck_bonus"],-5)
         st.session_state.money += salary
         
         
