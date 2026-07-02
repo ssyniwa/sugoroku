@@ -38,20 +38,27 @@ CHECKPOINTS = [5, 12]
 if 'pos' not in st.session_state:
     st.session_state.update({'pos': 0, 'money': 100, 'job': "学生", 'partner': "独身", 'log': [], 'waiting_choice': False})
 
+# --- メインUI ---
 st.title("🎲 Life Quest 2026")
 
-# ステータス表示
+# ステータス表示と画像表示を同一のブロックにまとめる
 with st.container():
-    st.markdown(f"""
-    <div class="status-card">
-        <b>職業:</b> {st.session_state.job} | <b>状況:</b> {st.session_state.partner}<br>
-        <b>所持金:</b> {st.session_state.money}万円
-    </div>
-    """, unsafe_allow_html=True)
+    # 画像を先に配置
+    current_cell = BOARD_DATA.get(st.session_state.pos, {"text": "平凡な日常。", "img": "images/akari5.png"})
+    
+    col_img, col_stat = st.columns([1, 2])
+    with col_img:
+        st.image(current_cell["img"], use_container_width=True)
+    with col_stat:
+        st.markdown(f"""
+        <div class="status-card">
+            <b>職業:</b> {st.session_state.job}<br>
+            <b>状況:</b> {st.session_state.partner}<br>
+            <b>資産:</b> {st.session_state.money}万円
+        </div>
+        """, unsafe_allow_html=True)
 
-# イベント表示
-current_cell = BOARD_DATA.get(st.session_state.pos, {"text": "平凡な日常。", "img": "images/akari5.png"})
-st.image(current_cell["img"], width=150)
+# 現在の状況テキストを画像の下に配置
 st.subheader(current_cell["text"])
 
 # --- ロジック ---
