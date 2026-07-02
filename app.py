@@ -73,7 +73,7 @@ def get_cell_data(pos):
     elif 21 <= pos <= 49:
         return random.choice(JOB_EVENTS)
     elif 51 <= pos <= 79:
-        if st.session_state.partner = "既婚":
+        if st.session_state.partner == "既婚":
             return random.choice(LIFE_STAGES)
         else:
             return random.choice(JOB_EVENTS)# これも辞書型にしておくこと
