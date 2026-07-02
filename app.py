@@ -27,10 +27,10 @@ st.markdown("""
 
 # --- ゲームデータ ---
 BOARD_DATA = {
-    0: {"text": "スタート！希望に満ちた朝。", "img": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png"},
-    5: {"text": "【運命の分かれ道】職業選択マス", "img": "https://cdn-icons-png.flaticon.com/512/1063/1063376.png", "type": "checkpoint"},
-    12: {"text": "【運命の分かれ道】結婚選択", "img": "https://cdn-icons-png.flaticon.com/512/2525/2525143.png", "type": "checkpoint"},
-    20: {"text": "ゴール！", "img": "https://cdn-icons-png.flaticon.com/512/3112/3112946.png"}
+    0: {"text": "スタート！希望に満ちた朝。", "img": "images/akari1.png"},
+    5: {"text": "【運命の分かれ道】職業選択マス", "img": "images/akari2.png", "type": "checkpoint"},
+    12: {"text": "【運命の分かれ道】結婚選択", "img": "images/akari3.png", "type": "checkpoint"},
+    20: {"text": "ゴール！", "img": "images/akari4.png"}
 }
 CHECKPOINTS = [5, 12]
 
@@ -50,7 +50,7 @@ with st.container():
     """, unsafe_allow_html=True)
 
 # イベント表示
-current_cell = BOARD_DATA.get(st.session_state.pos, {"text": "平凡な日常。", "img": "https://cdn-icons-png.flaticon.com/512/3062/3062678.png"})
+current_cell = BOARD_DATA.get(st.session_state.pos, {"text": "平凡な日常。", "img": "images/akari5.png"})
 st.image(current_cell["img"], width=150)
 st.subheader(current_cell["text"])
 
