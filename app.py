@@ -66,7 +66,10 @@ def get_cell_data(pos):
     elif 21 <= pos <= 49:
         return random.choice(JOB_EVENTS)
     elif 51 <= pos <= 79:
-        return random.choice(LIFE_STAGES) # これも辞書型にしておくこと
+        if st.session_state.partner = "既婚":
+            return random.choice(LIFE_STAGES)
+        else:
+            return random.choice(JOB_EVENTS)# これも辞書型にしておくこと
     elif 80 <= pos <= 99:
         return random.choice(ELDER_EVENTS)
     return {"text": "平凡な日常",  "img": "images/akari5.png","money": 0}
