@@ -158,7 +158,7 @@ if st.session_state.waiting_choice:
 else:
     if st.button("サイコロを振る！"):
         roll = random.randint(1, 6)
-        next_pos = min(st.session_state.pos + roll, 20)
+        next_pos = min(st.session_state.pos + roll, 100)
         
         # 職業補正の適用（収入イベント）
         stats = JOB_STATS[st.session_state.job]
