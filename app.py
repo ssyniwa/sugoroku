@@ -197,11 +197,49 @@ INFLUENCER_EVENTS = [
     {"text": "コラボ企画で人気配信者と共演", "img": "images/job719.png", "money": 40},
     {"text": "アカウントが突如凍結…再起への道", "img": "images/job720.png", "money": -80},
 ]
-]
-JOB_EVENTS = [
-    {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
-    {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
-    {"text": "プロジェクト成功", "img": "images/success.png", "money": 20},
+INVEST_EVENTS = [
+    {"text": "動画が世界中で大バズり！", "img": "images/job71.png", "money": 150},
+    {"text": "大手企業から専属アンバサダー依頼", "img": "images/job72.png", "money": 80},
+    {"text": "ライブ配信で投げ銭が止まらない", "img": "images/job73.png", "money": 60},
+    {"text": "ファン感謝イベントでグッズが即完売", "img": "images/job74.png", "money": 50},
+    {"text": "アフィリエイト広告が爆発的に売れる", "img": "images/job75.png", "money": 40},
+    {"text": "ネット記事で特集され認知度UP", "img": "images/job76.png", "money": 30},
+    {"text": "過去の失言が掘り返されて炎上…", "img": "images/job77.png", "money": -100},
+    {"text": "誤情報の拡散により謝罪動画の投稿", "img": "images/job78.png", "money": -40},
+    {"text": "悪質なアンチコメント対応で精神疲弊", "img": "images/job79.png", "money": -20},
+    {"text": "撮影機材を最新の高級品に一新", "img": "images/job710.png", "money": -40},
+    {"text": "動画編集を外注して効率化", "img": "images/job711.png", "money": -30},
+    {"text": "流行りの撮影スポットへ弾丸海外遠征", "img": "images/job712.png", "money": -50},
+    {"text": "著作権違反の指摘で動画削除・収益没収", "img": "images/job713.png", "money": -60},
+    {"text": "映えスポットでの撮影中に私物を破損", "img": "images/job714.png", "money": -15},
+    {"text": "フォロワーとの交流で新たな企画のヒントを得る", "img": "images/job715.png", "money": 20},
+    {"text": "ネットミーム化して知名度が急上昇", "img": "images/job716.png", "money": 50},
+    {"text": "プライベート流出！住所変更で引っ越し", "img": "images/job717.png", "money": -40},
+    {"text": "企画倒れで動画の再生数が伸び悩み", "img": "images/job718.png", "money": -10},
+    {"text": "コラボ企画で人気配信者と共演", "img": "images/job719.png", "money": 40},
+    {"text": "アカウントが突如凍結…再起への道", "img": "images/job720.png", "money": -80},
+] # 10種
+ADVENTURE_EVENTS = [
+    {"text": "動画が世界中で大バズり！", "img": "images/job71.png", "money": 150},
+    {"text": "大手企業から専属アンバサダー依頼", "img": "images/job72.png", "money": 80},
+    {"text": "ライブ配信で投げ銭が止まらない", "img": "images/job73.png", "money": 60},
+    {"text": "ファン感謝イベントでグッズが即完売", "img": "images/job74.png", "money": 50},
+    {"text": "アフィリエイト広告が爆発的に売れる", "img": "images/job75.png", "money": 40},
+    {"text": "ネット記事で特集され認知度UP", "img": "images/job76.png", "money": 30},
+    {"text": "過去の失言が掘り返されて炎上…", "img": "images/job77.png", "money": -100},
+    {"text": "誤情報の拡散により謝罪動画の投稿", "img": "images/job78.png", "money": -40},
+    {"text": "悪質なアンチコメント対応で精神疲弊", "img": "images/job79.png", "money": -20},
+    {"text": "撮影機材を最新の高級品に一新", "img": "images/job710.png", "money": -40},
+    {"text": "動画編集を外注して効率化", "img": "images/job711.png", "money": -30},
+    {"text": "流行りの撮影スポットへ弾丸海外遠征", "img": "images/job712.png", "money": -50},
+    {"text": "著作権違反の指摘で動画削除・収益没収", "img": "images/job713.png", "money": -60},
+    {"text": "映えスポットでの撮影中に私物を破損", "img": "images/job714.png", "money": -15},
+    {"text": "フォロワーとの交流で新たな企画のヒントを得る", "img": "images/job715.png", "money": 20},
+    {"text": "ネットミーム化して知名度が急上昇", "img": "images/job716.png", "money": 50},
+    {"text": "プライベート流出！住所変更で引っ越し", "img": "images/job717.png", "money": -40},
+    {"text": "企画倒れで動画の再生数が伸び悩み", "img": "images/job718.png", "money": -10},
+    {"text": "コラボ企画で人気配信者と共演", "img": "images/job719.png", "money": 40},
+    {"text": "アカウントが突如凍結…再起への道", "img": "images/job720.png", "money": -80},
 ]
 LIFE_STAGES = [
     {"text": "家族との団らん", "img": "images/work_hard.png", "money": -10},
@@ -239,12 +277,31 @@ def get_cell_data(pos):
             return random.choice(ATHLETE_EVENTS)
         elif st.session_state.job == "インフルエンサー":
             return random.choice(INFLUENCER_EVENTS)
-        return random.choice(JOB_EVENTS)
+        elif st.session_state.job == "投資家":
+            return random.choice(INVEST_EVENTS)
+        elif st.session_state.job == "冒険家":
+            return random.choice(ADVENTURE_EVENTS)
     elif 61 <= pos <= 79:
         if st.session_state.partner == "既婚":
             return random.choice(LIFE_STAGES)
-        else:
-            return random.choice(JOB_EVENTS)# これも辞書型にしておくこと
+        elif st.session_state.job == "サラリーマン":
+            return random.choice(SALARYMAN_EVENTS)
+        elif st.session_state.job == "起業家":
+            return random.choice(ENTREPRENEUR_EVENTS)
+        elif st.session_state.job == "公務員":
+            return random.choice(CIVIL_SERVANT_EVENTS)
+        elif st.session_state.job == "医者":
+            return random.choice(DOCTOR_EVENTS)
+        elif st.session_state.job == "芸術家":
+            return random.choice(ARTIST_EVENTS)
+        elif st.session_state.job == "スポーツ選手":
+            return random.choice(ATHLETE_EVENTS)
+        elif st.session_state.job == "インフルエンサー":
+            return random.choice(INFLUENCER_EVENTS)
+        elif st.session_state.job == "投資家":
+            return random.choice(INVEST_EVENTS)
+        elif st.session_state.job == "冒険家":
+            return random.choice(ADVENTURE_EVENTS)
     elif 80 <= pos <= 99:
         return random.choice(ELDER_EVENTS)
     return {"text": "平凡な日常",  "img": "images/akari5.png","money": 0}
