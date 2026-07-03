@@ -88,9 +88,26 @@ ENTREPRENEUR_EVENTS = [
     {"text": "自分の会社を売却（M&A）！", "img": "images/job220.png", "money": 200},
 ]
 DOCTOR_EVENTS = [
-    {"text": "緊急手術成功！謝礼金と評価を得る", "img": "images/surgery.png", "money": 60},
-    {"text": "高額な医療機器の導入が決定", "img": "images/equip.png", "money": -40},
-    # ... 他の18種
+    {"text": "緊急手術成功！謝礼金と評価を得る", "img": "images/job41.png", "money": 60},
+    {"text": "高額な医療機器の導入が決定", "img": "images/job42.png", "money": -40},
+     {"text": "予算策定業務が完璧に完了", "img": "images/job43.png", "money": 20},
+    {"text": "福利厚生で格安温泉旅行へ", "img": "images/job44.png", "money": 5},
+    {"text": "定期昇給で少しだけ手取りUP", "img": "images/job45.png", "money": 15},
+    {"text": "災害対策本部の設置で特別手当", "img": "images/job46.png", "money": 25},
+    {"text": "公共施設のリニューアル計画に貢献", "img": "images/job47.png", "money": 20},
+    {"text": "住民説明会で予期せぬ厳しい意見", "img": "images/job48.png", "money": -10},
+    {"text": "システム入替に伴う休日出勤", "img": "images/job49.png", "money": -5},
+    {"text": "部署異動で慣れない業務に四苦八苦", "img": "images/job410.png", "money": -15},
+    {"text": "経費削減のあおりで備品購入制限", "img": "images/job411.png", "money": -5},
+    {"text": "住民からの理不尽な苦情対応で疲弊", "img": "images/job412.png", "money": -10},
+    {"text": "忘年会で公務員仲間との絆が深まる", "img": "images/job413.png", "money": 5},
+    {"text": "資格取得支援制度を活用してスキルアップ", "img": "images/job414.png", "money": 10},
+    {"text": "庁内のスポーツ大会で景品をゲット", "img": "images/job415.png", "money": 5},
+    {"text": "激務による体調不良で休暇を取る", "img": "images/job416.png", "money": -10},
+    {"text": "新庁舎の建設で心機一転", "img": "images/job417.png", "money": 5},
+    {"text": "議会対応の資料作成で深夜作業", "img": "images/job418.png", "money": -5},
+    {"text": "地域イベントの運営サポートで出費", "img": "images/job419.png", "money": -10},
+    {"text": "早期退職優遇制度の案内が届く…", "img": "images/job420.png", "money": 30},
 ]
 CIVIL_SERVANT_EVENTS = [
     {"text": "地域住民から感謝の言葉を頂く", "img": "images/job31.png", "money": 10},
