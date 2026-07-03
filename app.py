@@ -254,16 +254,16 @@ LIFE_STAGES = [
     {"text": "家族全員で楽しめる趣味が見つかる", "img": "images/life10.png", "money": 5},
 ]
 SINGLE_EVENTS = [
-    {"text": "家族との団らん", "img": "images/single1.png", "money": -10},
-    {"text": "一人旅を満喫", "img": "images/single2.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/single3.png", "money": 20},
-    {"text": "趣味の時間", "img": "images/single4.png", "money": 20},
-    {"text": "一人旅を満喫", "img": "images/single5.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/single6.png", "money": 20},
-    {"text": "一人旅を満喫", "img": "images/single7.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/single8.png", "money": 20},
-    {"text": "一人旅を満喫", "img": "images/single9.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/single10.png", "money": 20},
+    {"text": "海外一人旅で自己成長！", "img": "images/single1.png", "money": -30},
+    {"text": "趣味の高級コレクションを大人買い", "img": "images/single2.png", "money": -50},
+    {"text": "スキルアップのために高額な資格を取得", "img": "images/single3.png", "money": -40},
+    {"text": "昇進して自由な生活に余裕が出る", "img": "images/single4.png", "money": 30},
+    {"text": "副業が軌道に乗り、安定したサイド収入", "img": "images/single5.png", "money": 40},
+    {"text": "突然の孤独を感じ、奮発して贅沢な一人暮らしへ", "img": "images/single6.png", "money": -20},
+    {"text": "仕事帰りに衝動的にジムの会員になる", "img": "images/single7.png", "money": -10},
+    {"text": "友人と気ままな贅沢グルメ旅", "img": "images/single8.png", "money": -20},
+    {"text": "仕事が評価され、臨時ボーナスを獲得", "img": "images/single9.png", "money": 25},
+    {"text": "自由気ままな生活で思わぬ節約術を習得", "img": "images/single10.png", "money": 15},
 ] # 10種
 ELDER_EVENTS = [
     {"text": "健康診断で異常なし", "img": "images/elder1.png", "money": -10},
