@@ -242,19 +242,40 @@ ADVENTURE_EVENTS = [
     {"text": "世界最高峰の登頂に成功！記念すべき旅の終わり", "img": "images/job920.png", "money": 200},
 ]
 LIFE_STAGES = [
-    {"text": "家族との団らん", "img": "images/work_hard.png", "money": -10},
-    {"text": "一人旅を満喫", "img": "images/raise.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/success.png", "money": 20},
+    {"text": "家族との団らん", "img": "images/life1.png", "money": -10},
+    {"text": "一人旅を満喫", "img": "images/life2.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/life3.png", "money": 20},
+    {"text": "趣味の時間", "img": "images/life4.png", "money": 20},
+    {"text": "一人旅を満喫", "img": "images/life5.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/life6.png", "money": 20},
+    {"text": "一人旅を満喫", "img": "images/life7.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/life8.png", "money": 20},
+    {"text": "一人旅を満喫", "img": "images/life9.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/life10.png", "money": 20},
 ]
 SINGLE_EVENTS = [
-    {"text": "家族との団らん", "img": "images/work_hard.png", "money": -10},
-    {"text": "一人旅を満喫", "img": "images/raise.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/success.png", "money": 20},
+    {"text": "家族との団らん", "img": "images/single1.png", "money": -10},
+    {"text": "一人旅を満喫", "img": "images/single2.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/single3.png", "money": 20},
+    {"text": "趣味の時間", "img": "images/single4.png", "money": 20},
+    {"text": "一人旅を満喫", "img": "images/single5.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/single6.png", "money": 20},
+    {"text": "一人旅を満喫", "img": "images/single7.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/single8.png", "money": 20},
+    {"text": "一人旅を満喫", "img": "images/single9.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/single10.png", "money": 20},
 ] # 10種
 ELDER_EVENTS = [
-    {"text": "健康診断で異常なし", "img": "images/work_hard.png", "money": -10},
-    {"text": "昔の友人と再会", "img": "images/raise.png", "money": 30},
-    {"text": "のんびりした休日", "img": "images/success.png", "money": 20},
+    {"text": "健康診断で異常なし", "img": "images/elder1.png", "money": -10},
+    {"text": "昔の友人と再会", "img": "images/elder2.png", "money": 30},
+    {"text": "のんびりした休日", "img": "images/elder3.png", "money": 20},
+    {"text": "のんびりした休日", "img": "images/elder4.png", "money": 20},
+    {"text": "のんびりした休日", "img": "images/elder5.png", "money": 20},
+    {"text": "のんびりした休日", "img": "images/elder6.png", "money": 20},
+    {"text": "のんびりした休日", "img": "images/elder7.png", "money": 20},
+    {"text": "のんびりした休日", "img": "images/elder8.png", "money": 20},
+    {"text": "のんびりした休日", "img": "images/elder9.png", "money": 20},
+    {"text": "のんびりした休日", "img": "images/elder10.png", "money": 20},
 ]
 
 # マスごとの生成関数（100マスを網羅する）
