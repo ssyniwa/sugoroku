@@ -175,6 +175,11 @@ ATHLETE_EVENTS = [
     {"text": "競技団体からの強化指定選手に選出", "img": "images/job619.png", "money": 20},
     {"text": "突然の引退表明！", "img": "images/job620.png", "money": 50},
 ]
+INFLUENCER_EVENTS = [
+    {"text": "動画が世界中で大バズり！", "img": "images/viral.png", "money": 150},
+    {"text": "過去の失言が掘り返されて炎上…", "img": "images/cancel.png", "money": -100},
+    # ... 他の18種をここに追加
+]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
     {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
@@ -214,6 +219,8 @@ def get_cell_data(pos):
             return random.choice(ARTIST_EVENTS)
         elif st.session_state.job == "スポーツ選手":
             return random.choice(ATHLETE_EVENTS)
+        elif st.session_state.job == "インフルエンサー":
+            return random.choice(INFLUENCER_EVENTS)
         return random.choice(JOB_EVENTS)
     elif 61 <= pos <= 79:
         if st.session_state.partner == "既婚":
