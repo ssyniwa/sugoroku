@@ -176,9 +176,27 @@ ATHLETE_EVENTS = [
     {"text": "突然の引退表明！", "img": "images/job620.png", "money": 50},
 ]
 INFLUENCER_EVENTS = [
-    {"text": "動画が世界中で大バズり！", "img": "images/viral.png", "money": 150},
-    {"text": "過去の失言が掘り返されて炎上…", "img": "images/cancel.png", "money": -100},
-    # ... 他の18種をここに追加
+    {"text": "動画が世界中で大バズり！", "img": "images/job71.png", "money": 150},
+    {"text": "過去の失言が掘り返されて炎上…", "img": "images/job72.png", "money": -100},
+    {"text": "海外トップチームからのオファー", "img": "images/job73.png", "money": 90},
+    {"text": "メディアの注目を集めCM出演料獲得", "img": "images/job74.png", "money": 60},
+    {"text": "シーズン自己ベスト更新で報奨金", "img": "images/job75.png", "money": 40},
+    {"text": "若手の台頭でレギュラー争いが激化", "img": "images/job76.png", "money": -10},
+    {"text": "練習中の怪我で一時戦線離脱", "img": "images/job77.png", "money": -40},
+    {"text": "高額なパーソナルトレーナーを雇う", "img": "images/job78.png", "money": -30},
+    {"text": "競技用具の最新モデルへの買い替え", "img": "images/job79.png", "money": -20},
+    {"text": "栄養管理のための専属シェフ契約", "img": "images/job710.png", "money": -25},
+    {"text": "大会直前の極度の緊張で調子を崩す", "img": "images/job711.png", "money": -10},
+    {"text": "ファンクラブ設立で安定収入増", "img": "images/job712.png", "money": 30},
+    {"text": "自身の名前を冠したグッズがヒット", "img": "images/job713.png", "money": 40},
+    {"text": "地方のスポーツ教室で講師を務める", "img": "images/job714.png", "money": 15},
+    {"text": "遠征先での移動費・宿泊費が嵩む", "img": "images/job715.png", "money": -15},
+    {"text": "ドーピング検査の準備と対応で疲弊", "img": "images/job716.png", "money": -5},
+    {"text": "チームメイトとの遠征での食事会", "img": "images/job717.png", "money": -10},
+    {"text": "激しい練習で疲労骨折（治療と休養）", "img": "images/job718.png", "money": -50},
+    {"text": "競技団体からの強化指定選手に選出", "img": "images/job719.png", "money": 20},
+    {"text": "突然の引退表明！", "img": "images/job720.png", "money": 50},
+]
 ]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
