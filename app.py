@@ -163,6 +163,14 @@ current_cell = get_cell_data(st.session_state.pos)
 st.session_state.money += current_cell.get("money", 0)
 if current_cell.get("money", 0) != 0:
     st.session_state.log.append(f"資金(+{current_cell.get("money", 0)}万円)")
+# 職業補正の適用（収入イベント）
+    stats = JOB_STATS[st.session_state.job]
+    if -5 < stats["luck_bonus"]:
+        salary = stats["salary"] + random.randint(-5, stats["luck_bonus"])
+    else :
+        salary = stats["salary"] + random.randint(stats["luck_bonus"],-5)
+    st.session_state.money += salary
+    st.session_state.log.append(f"進んだ！(+{salary}万円)")
 # 画像とステータスを一つのまとまりとして表示
 with st.container():
     col1, col2 = st.columns([1, 1])  # 画面を半分ずつに分ける
@@ -210,13 +218,7 @@ else:
         roll = random.randint(1, 6)
         next_pos = min(st.session_state.pos + roll, 100)
         
-        # 職業補正の適用（収入イベント）
-        stats = JOB_STATS[st.session_state.job]
-        if -5 < stats["luck_bonus"]:
-            salary = stats["salary"] + random.randint(-5, stats["luck_bonus"])
-        else :
-            salary = stats["salary"] + random.randint(stats["luck_bonus"],-5)
-        st.session_state.money += salary
+        
         
         
         # チェックポイント判定
@@ -227,7 +229,7 @@ else:
                 break
         
         st.session_state.pos = next_pos
-        st.session_state.log.append(f"進んだ！(+{salary}万円)")
+        
         # ゴール判定（ロジック内の既存のゴール判定をこれに置き換えてください）
         if st.session_state.pos >= 100:
             st.balloons()
