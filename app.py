@@ -242,16 +242,16 @@ ADVENTURE_EVENTS = [
     {"text": "世界最高峰の登頂に成功！記念すべき旅の終わり", "img": "images/job920.png", "money": 200},
 ]
 LIFE_STAGES = [
-    {"text": "家族との団らん", "img": "images/life1.png", "money": -10},
-    {"text": "一人旅を満喫", "img": "images/life2.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/life3.png", "money": 20},
-    {"text": "趣味の時間", "img": "images/life4.png", "money": 20},
-    {"text": "一人旅を満喫", "img": "images/life5.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/life6.png", "money": 20},
-    {"text": "一人旅を満喫", "img": "images/life7.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/life8.png", "money": 20},
-    {"text": "一人旅を満喫", "img": "images/life9.png", "money": 30},
-    {"text": "趣味の時間", "img": "images/life10.png", "money": 20},
+    {"text": "第一子が誕生！", "img": "images/life1.png", "money": 20},
+    {"text": "子供の入学式。", "img": "images/life2.png", "money": -30},
+    {"text": "夫婦で思い出の地に旅行", "img": "images/life3.png", "money": -40},
+    {"text": "マイホームの購入！", "img": "images/life4.png", "money": -100},
+    {"text": "子供の習い事の月謝を支払う", "img": "images/life5.png", "money": -15},
+    {"text": "親戚の集まりで皆に祝福される", "img": "images/life6.png", "money": 10},
+    {"text": "結婚記念日に高級レストランでディナー", "img": "images/life7.png", "money": -20},
+    {"text": "子供が風邪を引き看病と通院", "img": "images/life8.png", "money": -10},
+    {"text": "夫婦で協力して大掃除、不用品を売却", "img": "images/life9.png", "money": 15},
+    {"text": "家族全員で楽しめる趣味が見つかる", "img": "images/life10.png", "money": 5},
 ]
 SINGLE_EVENTS = [
     {"text": "家族との団らん", "img": "images/single1.png", "money": -10},
