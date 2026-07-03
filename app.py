@@ -266,16 +266,16 @@ SINGLE_EVENTS = [
     {"text": "自由気ままな生活で思わぬ節約術を習得", "img": "images/single10.png", "money": 15},
 ] # 10種
 ELDER_EVENTS = [
-    {"text": "健康診断で異常なし", "img": "images/elder1.png", "money": -10},
-    {"text": "昔の友人と再会", "img": "images/elder2.png", "money": 30},
-    {"text": "のんびりした休日", "img": "images/elder3.png", "money": 20},
-    {"text": "のんびりした休日", "img": "images/elder4.png", "money": 20},
-    {"text": "のんびりした休日", "img": "images/elder5.png", "money": 20},
-    {"text": "のんびりした休日", "img": "images/elder6.png", "money": 20},
-    {"text": "のんびりした休日", "img": "images/elder7.png", "money": 20},
-    {"text": "のんびりした休日", "img": "images/elder8.png", "money": 20},
-    {"text": "のんびりした休日", "img": "images/elder9.png", "money": 20},
-    {"text": "のんびりした休日", "img": "images/elder10.png", "money": 20},
+    {"text": "健康診断で異常なし", "img": "images/elder1.png", "money": 20},
+    {"text": "長年の夢だった世界一周クルーズへ", "img": "images/elder2.png", "money": -50},
+    {"text": "健康維持のためのスポーツジム通い", "img": "images/elder3.png", "money": -10},
+    {"text": "地域のボランティア活動で感謝される", "img": "images/elder4.png", "money": 10},
+    {"text": "古い友人たちと再会して思い出話に花が咲く", "img": "images/elder5.png", "money": 5},
+    {"text": "趣味のガーデニングがコンテストで入賞", "img": "images/elder6.png", "money": 20},
+    {"text": "ちょっとした体調不良で病院へ", "img": "images/elder7.png", "money": -15},
+    {"text": "昔の貯金が満期になり利息を受け取る", "img": "images/elder8.png", "money": 30},
+    {"text": "ずっと欲しかった高級椅子を購入", "img": "images/elder9.png", "money": -20},
+    {"text": "遺産整理で思わぬ資産が見つかる", "img": "images/elder10.png", "money": 40},
 ]
 
 # マスごとの生成関数（100マスを網羅する）
