@@ -131,6 +131,28 @@ CIVIL_SERVANT_EVENTS = [
     {"text": "地域イベントの運営サポートで出費", "img": "images/job319.png", "money": -10},
     {"text": "早期退職優遇制度の案内が届く…", "img": "images/job320.png", "money": 30},
 ]
+ARTIST_EVENTS = [
+    {"text": "個展が大盛況！作品が完売", "img": "images/job51.png", "money": 100},
+    {"text": "高価な画材・機材の衝動買い", "img": "images/job52.png", "money": -40},
+    {"text": "予算策定業務が完璧に完了", "img": "images/job53.png", "money": 20},
+    {"text": "福利厚生で格安温泉旅行へ", "img": "images/job54.png", "money": 5},
+    {"text": "定期昇給で少しだけ手取りUP", "img": "images/job55.png", "money": 15},
+    {"text": "災害対策本部の設置で特別手当", "img": "images/job56.png", "money": 25},
+    {"text": "公共施設のリニューアル計画に貢献", "img": "images/job57.png", "money": 20},
+    {"text": "住民説明会で予期せぬ厳しい意見", "img": "images/job58.png", "money": -10},
+    {"text": "システム入替に伴う休日出勤", "img": "images/job59.png", "money": -5},
+    {"text": "部署異動で慣れない業務に四苦八苦", "img": "images/job510.png", "money": -15},
+    {"text": "経費削減のあおりで備品購入制限", "img": "images/job511.png", "money": -5},
+    {"text": "住民からの理不尽な苦情対応で疲弊", "img": "images/job512.png", "money": -10},
+    {"text": "忘年会で公務員仲間との絆が深まる", "img": "images/job513.png", "money": 5},
+    {"text": "資格取得支援制度を活用してスキルアップ", "img": "images/job514.png", "money": 10},
+    {"text": "庁内のスポーツ大会で景品をゲット", "img": "images/job515.png", "money": 5},
+    {"text": "激務による体調不良で休暇を取る", "img": "images/job516.png", "money": -10},
+    {"text": "新庁舎の建設で心機一転", "img": "images/job517.png", "money": 5},
+    {"text": "議会対応の資料作成で深夜作業", "img": "images/job518.png", "money": -5},
+    {"text": "地域イベントの運営サポートで出費", "img": "images/job519.png", "money": -10},
+    {"text": "早期退職優遇制度の案内が届く…", "img": "images/job520.png", "money": 30},
+]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
     {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
@@ -166,6 +188,8 @@ def get_cell_data(pos):
             return random.choice(CIVIL_SERVANT_EVENTS)
         elif st.session_state.job == "医者":
             return random.choice(DOCTOR_EVENTS)
+        elif st.session_state.job == "芸術家":
+            return random.choice(ARTIST_EVENTS)
         return random.choice(JOB_EVENTS)
     elif 51 <= pos <= 79:
         if st.session_state.partner == "既婚":
