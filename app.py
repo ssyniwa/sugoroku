@@ -72,7 +72,7 @@ ENTREPRENEUR_EVENTS = [
     {"text": "大手企業との提携が決定", "img": "images/job24.png", "money": 60},
     {"text": "新規事業が異例のヒット", "img": "images/job25.png", "money": 70},
     {"text": "補助金審査に見事通過", "img": "images/job26.png", "money": 40},
-     {"text": "クラウドファンディング大成功", "img": "images/job27.png", "money": 50},
+    {"text": "クラウドファンディング大成功", "img": "images/job27.png", "money": 50},
     {"text": "取引先が突然の倒産…売掛金回収不能", "img": "images/job28.png", "money": -80},
     {"text": "サーバーがダウンし補償問題に", "img": "images/job29.png", "money": -50},
     {"text": "競合他社に顧客をごっそり奪われる", "img": "images/job210.png", "money": -40},
@@ -85,7 +85,29 @@ ENTREPRENEUR_EVENTS = [
     {"text": "訴訟リスク発生、弁護士費用で痛い出費", "img": "images/job217.png", "money": -40},
     {"text": "徹夜の連続でついにダウン（治療費）", "img": "images/job218.png", "money": -30},
     {"text": "運命のビジネスパートナーとの出会い", "img": "images/job219.png", "money": 30},
-     {"text": "自分の会社を売却（M&A）！", "img": "images/job220.png", "money": 200},
+    {"text": "自分の会社を売却（M&A）！", "img": "images/job220.png", "money": 200},
+]
+CIVIL_SERVANT_EVENTS = [
+    {"text": "地域住民から感謝の言葉を頂く", "img": "images/job31.png", "money": 10},
+    {"text": "長期勤続による表彰金", "img": "images/job32.png", "money": 30},
+    {"text": "予算策定業務が完璧に完了", "img": "images/job33.png", "money": 20},
+    {"text": "福利厚生で格安温泉旅行へ", "img": "images/job34.png", "money": 5},
+    {"text": "定期昇給で少しだけ手取りUP", "img": "images/job35.png", "money": 15},
+    {"text": "災害対策本部の設置で特別手当", "img": "images/job36.png", "money": 25},
+    {"text": "公共施設のリニューアル計画に貢献", "img": "images/job37.png", "money": 20},
+    {"text": "住民説明会で予期せぬ厳しい意見", "img": "images/job38.png", "money": -10},
+    {"text": "システム入替に伴う休日出勤", "img": "images/job39.png", "money": -5},
+    {"text": "部署異動で慣れない業務に四苦八苦", "img": "images/job310.png", "money": -15},
+    {"text": "経費削減のあおりで備品購入制限", "img": "images/job311.png", "money": -5},
+    {"text": "住民からの理不尽な苦情対応で疲弊", "img": "images/job312.png", "money": -10},
+    {"text": "忘年会で公務員仲間との絆が深まる", "img": "images/job313.png", "money": 5},
+    {"text": "資格取得支援制度を活用してスキルアップ", "img": "images/job314.png", "money": 10},
+    {"text": "庁内のスポーツ大会で景品をゲット", "img": "images/job315.png", "money": 5},
+    {"text": "激務による体調不良で休暇を取る", "img": "images/job316.png", "money": -10},
+    {"text": "新庁舎の建設で心機一転", "img": "images/job317.png", "money": 5},
+    {"text": "議会対応の資料作成で深夜作業", "img": "images/job318.png", "money": -5},
+    {"text": "地域イベントの運営サポートで出費", "img": "images/job319.png", "money": -10},
+    {"text": "早期退職優遇制度の案内が届く…", "img": "images/job320.png", "money": 30},
 ]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
@@ -118,6 +140,8 @@ def get_cell_data(pos):
             return random.choice(SALARYMAN_EVENTS)
         elif st.session_state.job == "起業家":
             return random.choice(ENTREPRENEUR_EVENTS)
+        elif st.session_state.job == "公務員":
+            return random.choice(CIVIL_SERVANT_EVENTS)
         return random.choice(JOB_EVENTS)
     elif 51 <= pos <= 79:
         if st.session_state.partner == "既婚":
