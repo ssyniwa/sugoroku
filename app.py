@@ -101,7 +101,7 @@ DOCTOR_EVENTS = [
     {"text": "難病治療のプロジェクトリーダーに就任", "img": "images/job411.png", "money": 40},
     {"text": "海外の最新医療視察へ出発", "img": "images/job412.png", "money": -20},
     {"text": "患者さんから温かい手紙を貰う", "img": "images/job413.png", "money": 10},
-    {"text": "オンコール待機中に呼び出される", "img": "images/job414.png", "money": -10},
+    {"text": "オンコール待機中に呼び出される", "img": "images/job414.jpg", "money": -10},
     {"text": "医局の飲み会でネットワークを拡大", "img": "images/job415.png", "money": -10},
     {"text": "研究費の獲得競争に勝利", "img": "images/job416.png", "money": 30},
     {"text": "診断に迷い、専門書を大量購入", "img": "images/job417.png", "money": -15},
