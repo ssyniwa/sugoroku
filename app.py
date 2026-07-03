@@ -153,6 +153,28 @@ ARTIST_EVENTS = [
     {"text": "偶然の出会いから表現の幅が広がる", "img": "images/job519.png", "money": 10},
     {"text": "美術館に作品が永久収蔵される！", "img": "images/job520.png", "money": 150},
 ]
+ATHLETE_EVENTS = [
+    {"text": "全国大会で優勝、スポンサー獲得！", "img": "images/job61.png", "money": 100},
+    {"text": "激しい練習で疲労骨折（治療と休養）", "img": "images/job62.png", "money": -50},
+    {"text": "大企業とのコラボデザインが採用", "img": "images/job63.png", "money": 60},
+    {"text": "SNSで作品が拡散、フォロワー激増", "img": "images/job64.png", "money": 40},
+    {"text": "公募展でグランプリ受賞", "img": "images/job65.png", "money": 70},
+    {"text": "自分の作品が映画の劇中に登場", "img": "images/job66.png", "money": 50},
+    {"text": "インスピレーションを求めて極貧旅行", "img": "images/job67.png", "money": -30},
+    {"text": "高価な画材・機材の衝動買い", "img": "images/job68.png", "money": -40},
+    {"text": "依頼主の無茶ぶりに対応して消耗", "img": "images/job69.png", "money": -10},
+    {"text": "制作に行き詰まり、気分転換に散財", "img": "images/job610.png", "money": -20},
+    {"text": "自分の作風が時代を先取りしすぎて理解されない", "img": "images/job611.png", "money": -30},
+    {"text": "ギャラリーの利用料が高騰", "img": "images/job612.png", "money": -20},
+    {"text": "尊敬する師匠からのアドバイスで開眼", "img": "images/job613.png", "money": 20},
+    {"text": "地方自治体の壁画制作を受託", "img": "images/job614.png", "money": 30},
+    {"text": "作品保管場所の確保でスタジオ借り入れ", "img": "images/job615.png", "money": -20},
+    {"text": "表現の幅を広げるためのワークショップ受講", "img": "images/job616.png", "money": -15},
+    {"text": "著作権侵害のトラブル対応で弁護士へ相談", "img": "images/job617.png", "money": -40},
+    {"text": "徹夜で制作し、体調を崩す（医療費）", "img": "images/job618.png", "money": -20},
+    {"text": "偶然の出会いから表現の幅が広がる", "img": "images/job619.png", "money": 10},
+    {"text": "美術館に作品が永久収蔵される！", "img": "images/job620.png", "money": 150},
+]
 JOB_EVENTS = [
     {"text": "残業続きで疲弊", "img": "images/work_hard.png", "money": -10},
     {"text": "昇給のチャンス！", "img": "images/raise.png", "money": 30},
@@ -173,13 +195,13 @@ ELDER_EVENTS = [
 def get_cell_data(pos):
     if pos == 0: return {"text": "スタート！", "img": "images/akari1.png"}
     elif pos == 20: return {"text": "職業選択マス",  "img": "images/akari2.png","type": "checkpoint"}
-    elif pos == 50: return {"text": "結婚選択マス", "img": "images/akari3.png", "type": "checkpoint"}
+    elif pos == 60: return {"text": "結婚選択マス", "img": "images/akari3.png", "type": "checkpoint"}
     elif pos == 100: return {"text": "ゴール！", "img": "images/akari4.png"}
     
     # 範囲指定でイベントを割り当て
     elif 1 <= pos <= 19:
         return random.choice(STUDENT_EVENTS)
-    elif 21 <= pos <= 49:
+    elif 21 <= pos <= 59:
         if st.session_state.job == "サラリーマン":
             return random.choice(SALARYMAN_EVENTS)
         elif st.session_state.job == "起業家":
@@ -190,8 +212,10 @@ def get_cell_data(pos):
             return random.choice(DOCTOR_EVENTS)
         elif st.session_state.job == "芸術家":
             return random.choice(ARTIST_EVENTS)
+        elif st.session_state.job == "スポーツ選手":
+            return random.choice(ATHLETE_EVENTS)
         return random.choice(JOB_EVENTS)
-    elif 51 <= pos <= 79:
+    elif 61 <= pos <= 79:
         if st.session_state.partner == "既婚":
             return random.choice(LIFE_STAGES)
         else:
@@ -251,7 +275,7 @@ if st.session_state.waiting_choice:
                 st.session_state.job = job
                 st.session_state.waiting_choice = False
                 st.rerun()
-    elif st.session_state.pos == 50:
+    elif st.session_state.pos == 60:
         if st.button("結婚する（費用30万）"):
             st.session_state.partner = "既婚"
             st.session_state.money -= 30
