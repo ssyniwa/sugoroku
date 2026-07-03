@@ -245,6 +245,11 @@ LIFE_STAGES = [
     {"text": "家族との団らん", "img": "images/work_hard.png", "money": -10},
     {"text": "一人旅を満喫", "img": "images/raise.png", "money": 30},
     {"text": "趣味の時間", "img": "images/success.png", "money": 20},
+]
+SINGLE_EVENTS = [
+    {"text": "家族との団らん", "img": "images/work_hard.png", "money": -10},
+    {"text": "一人旅を満喫", "img": "images/raise.png", "money": 30},
+    {"text": "趣味の時間", "img": "images/success.png", "money": 20},
 ] # 10種
 ELDER_EVENTS = [
     {"text": "健康診断で異常なし", "img": "images/work_hard.png", "money": -10},
@@ -284,24 +289,8 @@ def get_cell_data(pos):
     elif 61 <= pos <= 79:
         if st.session_state.partner == "既婚":
             return random.choice(LIFE_STAGES)
-        elif st.session_state.job == "サラリーマン":
-            return random.choice(SALARYMAN_EVENTS)
-        elif st.session_state.job == "起業家":
-            return random.choice(ENTREPRENEUR_EVENTS)
-        elif st.session_state.job == "公務員":
-            return random.choice(CIVIL_SERVANT_EVENTS)
-        elif st.session_state.job == "医者":
-            return random.choice(DOCTOR_EVENTS)
-        elif st.session_state.job == "芸術家":
-            return random.choice(ARTIST_EVENTS)
-        elif st.session_state.job == "スポーツ選手":
-            return random.choice(ATHLETE_EVENTS)
-        elif st.session_state.job == "インフルエンサー":
-            return random.choice(INFLUENCER_EVENTS)
-        elif st.session_state.job == "投資家":
-            return random.choice(INVEST_EVENTS)
-        elif st.session_state.job == "冒険家":
-            return random.choice(ADVENTURE_EVENTS)
+        else:
+            return random.choice(SINGLE_EVENTS)
     elif 80 <= pos <= 99:
         return random.choice(ELDER_EVENTS)
     return {"text": "平凡な日常",  "img": "images/akari5.png","money": 0}
