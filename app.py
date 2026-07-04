@@ -11,7 +11,7 @@ JOB_STATS = {
     "芸術家": {"salary": 15, "luck_bonus": -10},
     "スポーツ選手": {"salary": 30, "luck_bonus": -5},
     "インフルエンサー": {"salary": 25, "luck_bonus": -15},
-    "投資家": {"salary": 5, "luck_bonus": 5},
+    "投資家": {"salary": 50, "luck_bonus": 5},
     "冒険家": {"salary": 5, "luck_bonus": 15}
 }
 
