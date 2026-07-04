@@ -321,7 +321,10 @@ if 'pos' not in st.session_state:
 
 # --- メインUI ---
 st.title("🎲 Life Quest 2026")
-
+# 進行状況ゲージを追加
+progress = min(st.session_state.pos / 100, 1.0)
+st.progress(progress)
+st.caption(f"人生の旅路: {st.session_state.pos}/100 マス")
 # 現在のイベント情報を取得
 current_cell = get_cell_data(st.session_state.pos)
 st.session_state.money += current_cell.get("money", 0)
